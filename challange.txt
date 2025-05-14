@@ -1,0 +1,68 @@
+Implement a Library Management System that demonstrates OOP pillars:
+    Inheritance: Member and Librarian inherit from Person
+    Encapsulation: internal state (borrowed books, catalog) must be private (__). Expose only necessary getters/setters.
+    Polymorphism: override introduce() in each subclass.
+    Abstraction: provide methods on Library (add_book(), lend_book(), receive_book(), list_available()) so users never access internal attributes directly.
+
+Requirements:
+
+Class Person
+    Attribute: _name (protected)
+    Method: introduce() prints a generic greeting.
+
+Subclass Member(Person)
+    Private attributes: __member_id, __borrowed (list of Book)
+
+Methods:
+    borrow(self, book, library)
+    return_book(self, book, library)
+    list_borrowed(self) → List[str]
+    Override introduce() to include member ID.
+
+Subclass Librarian(Person)
+    Private attribute: __employee_id
+    Override introduce() to include employee ID.
+
+Class Book
+    Attributes: title, author (both public).
+
+Class Library
+    Private attributes: __catalog (dict code→Book), __available (set of codes)
+
+Methods:
+    add_book(self, code: str, book: Book)
+    lend_book(self, book: Book, member: Member) → bool
+    receive_book(self, book: Book)
+    list_available(self) → List[str]
+
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxx
+ATM - balance, deposit,  withdraw 
+    - set pin, profile
+
+
+class Bank:
+
+    def __init__(self, owner, balance=0):
+        self.owner = owner
+        self.__balance = balance
+
+    def withdraw(self, amount): 
+        if 0 < amount <= self.balance:
+            address the user 
+
+    def deposit(self, amount):
+        if amount > 0:
+            self.__balance += amount
+
+    def get_balance(self):
+        return self.__balance
+
+    @abstractmethod
+    def reset_pin(self, pin, otp):
+        login_attempts = 0 
+
+        if the count is > 3 => Your account has been blocked please contact admin" 
+
