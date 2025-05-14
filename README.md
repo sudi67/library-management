@@ -34,7 +34,18 @@ The `Bank` class demonstrates encapsulation and abstraction with private balance
 
 Implementations of the classes are provided in the `library_management.py` file.
 
+## Testing
+
+A test script `test_library_management.py` is recommended to verify the functionality of the Library Management System. It should:
+
+- Create instances of Library, Book, Member, and Librarian.
+- Demonstrate polymorphic `introduce()` calls.
+- Test adding books, borrowing, returning, and listing books.
+- Include edge cases such as borrowing books not in the catalog, borrowing already lent books, returning books not borrowed, empty catalog behavior, and multiple members borrowing and returning books.
+- Print outputs to verify correct behavior.
+
 ## Notes
 
 - The Bank class is abstract and requires subclassing to implement the `reset_pin` method.
 - The Library Management System enforces encapsulation by using private attributes and exposing only necessary methods.
+
