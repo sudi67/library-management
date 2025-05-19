@@ -111,5 +111,5 @@ def main():
     for book_info in library.list_available():
         print(book_info)
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     main()
