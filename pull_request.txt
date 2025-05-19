@@ -1,0 +1,27 @@
+Pull Request: Library Management System Database Schema and SQLite Database
+
+Summary:
+This pull request adds the database schema and SQLite database file for the Library Management System as per the ERD and requirements discussed.
+
+Files included:
+- library_management_schema.txt: Contains the SQL commands to create tables for Author, Book, Member, Loan, Category, and the many-to-many relationship tables BookAuthor and BookCategory.
+- library_management.db: SQLite database file created by executing the schema commands.
+
+Details:
+The schema defines the following tables with appropriate primary keys, foreign keys, and constraints:
+- Author
+- Book
+- Member
+- Loan
+- Category
+- BookAuthor (many-to-many between Book and Author)
+- BookCategory (many-to-many between Book and Category)
+
+Testing:
+A thorough test script (test_library_management_db.py) was created and run to verify:
+- Table creation
+- Data insertion
+- Relationship integrity
+- Foreign key constraints
+
+All tests passed successfully.
